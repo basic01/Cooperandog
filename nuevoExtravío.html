@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cooperandog</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" type="text/css" href="css/perfil.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="nav">
+		<i class="fas fa-bars" id="menu"></i>
+		<label>Nuevo Extravío</label>
+	</div>
+
+	<div class="menu">
+		<ul class="menu-items">
+			<li>
+				<a href="" class="opcion">
+					<img src="img/home.png">
+					<p>Página principal</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/user.png">
+					<p>Perfil</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/heart.png">
+					<p>Adopciones</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/wanted.png">
+					<p>Extravíos</p>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/pin.png">
+					<p>Encuentros/Rescates</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/calendar.png">
+					<p>Eventos</p>
+				</a>
+			</li>
+
+			<li class="opcionExtra">
+				<a href="" class="opcion">
+					<img src="img/info.png">
+					<p>Acerca de</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/exit.png">
+					<p>Cerrar sesión</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+
+	<div class="container-fluid">
+		<div class="row cont">
+			<div class="col-12 col-lg-4 col-md-6">
+				<div class="bloque">
+					<h1>Nuevo Extravío</h1>
+					<form class="form">
+
+						<label>Anuncio:</label>
+						<input type="text" name="">
+
+						<label>Recompensa:</label>
+						<input type="number" name="">
+
+						<label>Raza:</label>
+						<input type="text" name="">
+
+						<label>Color:</label>
+						<input type="text" name="">
+
+						<label>Fecha de extravío:</label>
+						<input type="text" name="">
+
+						<label>Nombre:</label>
+						<input type="text" name="">
+
+						<label>Tamaño:</label>
+						<input type="text" name="">
+
+						<label>Señas particulares:</label>
+						<textarea></textarea>
+
+						<label>Lugar extravío:</label>
+						<div id="map"></div>
+
+						<label>Descripción extravío:</label>
+						<textarea></textarea>
+
+						<label>Foto perro:</label>
+						<div class="upload-btn-wrapper">
+							<i class="fas fa-camera-retro"></i>
+							<p id="fileText">Selecciona una foto...</p>
+							<input type="file" name="myfile" onchange="cambiarTexto()" />
+						</div>
+
+						<button type="submir" class="boton">Agregar evento</button>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+</body>
+	<script type="text/javascript" src="js/funcionesEstilos.js"></script>
+
+	<!-- javascripts para mapa -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMR5-evmkPyXRv3bgo2VCinUb3FDUy2Zk&callback=initMap"></script>
+	<script>
+		
+      var map;
+  	 function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+		  center: {lat:  20.7040362, lng: -100.4438353},
+          zoom: 13,
+
+        });
+
+        var icon = {
+          url: 'img/heart.png',
+          scaledSize: new google.maps.Size(50, 50), // size
+        }
+
+        /*var label = {
+          text: '¡Perrito extraviado!',
+          color: 'gray',
+        }*/
+
+        var marker = new google.maps.Marker({
+          position: {lat:  20.7040362, lng: -100.4438353},
+          /*label: label,*/
+          icon: icon,
+          map: map,
+
+        });
+      }
+	</script>
+</html>

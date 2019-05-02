@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cooperandog</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/perfil.css">
+	<link rel="stylesheet" type="text/css" href="css/adopciones.css">
+	<link rel="stylesheet" type="text/css" href="css/extravios.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<style> 
+	</style>
+	<div class="nav">
+		<i class="fas fa-bars" id="menu"></i>
+		<label>Extravíos</label>
+	</div>
+
+	<div class="menu">
+		<ul class="menu-items">
+			<li>
+				<a href="" class="opcion">
+					<img src="img/home.png">
+					<p>Página principal</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/user.png">
+					<p>Perfil</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/heart.png">
+					<p>Adopciones</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/wanted.png">
+					<p>Extravíos</p>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/pin.png">
+					<p>Encuentros/Rescates</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/calendar.png">
+					<p>Eventos</p>
+				</a>
+			</li>
+
+			<li class="opcionExtra">
+				<a href="" class="opcion">
+					<img src="img/info.png">
+					<p>Acerca de</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/exit.png">
+					<p>Cerrar sesión</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+
+	<div class="container-fluid">
+		<div class="row cont">
+			<div class="back">
+				<a href="" class="boton">Agregar extravío</a>
+			</div>
+			<div class="col-12 col-lg-8 col-md-8">
+				<div class="feed">
+					
+
+					<div class="bloque">
+						<p class="fecha">12/04/19 12:30 p.m.</p>
+						<div class="profile">
+							<div class="contImg2">
+								<img src="img/hombre.jpg">
+							</div>
+							<div class="info2">
+								<label>Emma Robles</label>
+								<div class="category">
+									<i class="fas fa-paw"></i>
+									<small>Extravíos</small>
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<h4>MALTÉS EXTRAVIADO</h4>
+							<small>RECOMPENSA: $5,000</small>
+							<p>Encontré este perrito cerca de Universidad a la altura de Ezequiel Montes. Solicito ayuda para encontrar a su dueño o un hogar permanente.</p>
+
+							<div class="details row">
+								<div class="col-6 col-lg-4 details-left">
+									<label>Raza:</label>
+									<p>Maltés</p>
+
+									<label>Color:</label>
+									<p>Café</p>
+								</div>
+
+								<div class="col-6 col-lg-4 details-right">
+									<label>Nombre:</label>
+									<p>Jerry</p>
+
+									<label>Tamaño:</label>
+									<p>Mediano</p>
+								</div>
+
+								<div class="col-12 col-lg-4">
+									<label>Fecha extravío:</label>
+									<p>20 de marzo de 2019</p>
+
+									<label>Señas particulares:</label>
+									<p>Colar rojo con una placa. Es muy tímido.</p>
+								</div>
+
+								<div class="col-12 col-lg-6 map">
+									<label>Lugar extravío</label>
+									<div id="map"></div>
+								</div>
+								<div class="col-12 col-lg-6">
+									<label>Foto:</label>
+									<img src="img/perro1.png">
+								</div>
+							</div>
+
+						</div>
+						<div class="extra">
+							<div class="comentarios">
+								<img src="img/comentarios.png">
+								<p><span>3</span> comentarios</p>
+							</div>
+							<a href="">Ver más</a>
+						</div>
+					</div>
+
+
+
+				</div>				
+			</div>
+		</div>
+	</div>
+
+</body>
+	<script type="text/javascript" src="js/funcionesEstilos.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMR5-evmkPyXRv3bgo2VCinUb3FDUy2Zk&callback=initMap"></script>
+	<script>
+		
+      var map;
+  	 function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+		  center: {lat:  20.7040362, lng: -100.4438353},
+          zoom: 13,
+
+        });
+
+        var icon = {
+          url: 'img/heart.png',
+          scaledSize: new google.maps.Size(50, 50), // size
+        }
+
+        /*var label = {
+          text: '¡Perrito extraviado!',
+          color: 'gray',
+        }*/
+
+        var marker = new google.maps.Marker({
+          position: {lat:  20.7040362, lng: -100.4438353},
+          /*label: label,*/
+          icon: icon,
+          map: map,
+
+        });
+      }
+
+      
+	</script>
+</html>

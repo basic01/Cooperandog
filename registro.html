@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cooperandog</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/registro.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/nav.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="nav">
+		<i class="fas fa-bars" id="menu"></i>
+		<img src="img/logo.png">
+	</div>
+
+	<div class="menu menuStart">
+		<ul class="menu-items">
+			<li>
+				<a href="" class="opcion">
+					<img src="img/home.png">
+					<p>Inicio</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/user.png">
+					<p>Iniciar sesión</p>
+				</a>
+			</li>
+
+			<li>
+				<a href="" class="opcion">
+					<img src="img/paw.png">
+					<p>Registrarse</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row cont-form">
+			<div class="col-12 col-lg-4 col-md-6 col-sm-8">	
+				<h2>Registro</h2>
+				<p>Llena los siguientes campos para hacer el registro</p>
+				<form class="form">
+						<label>Correo electrónico:</label>
+						<input type="email" name="">
+
+						<label>Nombre completo:</label>
+						<input type="text" name="">
+
+						<label>Municipio, estado:</label>
+						<input type="text" name="">
+
+						<label>Contraseña:</label>
+						<input type="password" name="">
+
+						<label>Confirmar contraseña:</label>
+						<input type="password" name="">
+
+						<label>Foto perfil:</label>
+						<div class="upload-btn-wrapper">
+							<i class="fas fa-camera-retro"></i>
+							<p id="fileText">Selecciona una foto...</p>
+							<input type="file" name="myfile" onchange="cambiarTexto()" />
+						</div>
+
+						<div class="btns">
+							<button class="boton" type="submit">Registrarse</button>
+							<a href="">¿Ya eres miembro? <br> Iniciar sesión </a>
+						</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="js/funcionesEstilos.js"></script>
+</html>
